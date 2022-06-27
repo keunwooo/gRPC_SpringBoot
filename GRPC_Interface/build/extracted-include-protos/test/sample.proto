@@ -1,0 +1,34 @@
+syntax = "proto3";
+
+//package org.example;
+
+option java_multiple_files = true;
+option java_package = "org.chb.examples.lib";
+option java_outer_classname = "HelloWorldProto";
+
+// The greeting service definition.
+service MyService {
+  // Sends a greeting
+  rpc SayHello (HelloRequest) returns (HelloReply) {
+  }
+  rpc SayHelloServerStream (HelloRequest) returns (stream HelloReply) {
+  }
+  rpc SayHelloClientStream (stream HelloRequest) returns (HelloReply) {
+  }
+  rpc SayHelloBiStream (stream HelloRequest) returns (stream HelloReply) {
+  }
+
+}
+
+// The request message containing the user's name.
+message HelloRequest {
+  string name = 1;
+  string memo = 2;
+}
+
+// The response message containing the greetings
+message HelloReply {
+  string message = 1;
+  string greeting = 2;
+}
+
