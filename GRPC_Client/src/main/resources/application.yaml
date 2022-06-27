@@ -1,0 +1,13 @@
+server:
+  port: 8081
+grpc:
+  client:
+    test:
+      address: 'static://127.0.0.1:9090'
+      negotiationtype: plaintext
+    test1:
+      address: 'static://127.0.0.1:9090'
+      negotiationtype: plaintext
+    test2:
+      address: 'static://127.0.0.1:9090'
+      negotiationtype: plaintext
